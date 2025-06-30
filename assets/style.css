@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #E4E7F0;
+    font-family: "Montserrat", sans-serif;
+
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFFFFF;
+    border-radius: 1em;
+    margin: 1em;
+}
+
+.icon-page {
+    font-size: 40px;
+    align-self: center;
+    padding: 0.5em;
+}
+
+.top-of-page {
+    display: flex;
+    flex-direction: row;
+    padding: 1em;
+    color: #FFFFFF;
+    background-image: linear-gradient(to right, #0B3882, #0C2A5B);
+    width: 100%;
+    border-radius: 1em;
+}
+
+
+.selection-area {
+    display: flex;
+    border: 1px solid #0000001a;
+    border-radius: 0.5em;
+    box-sizing: border-box;
+    flex-grow: 1;
+    align-items: center;
+    padding-left: 1em;
+}
+
+
+.selection-area:has(:checked) {
+    border: 2px solid #094AB4;
+    color: #094AB4;
+}
+
+.text-area {
+    display: flex;
+    padding: 1em;
+    margin: 0px;
+    flex-direction: column;
+}
+
+.title,
+.description {
+    margin: 0px;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    gap: 1em;
+    padding: 32px 24px;
+}
+
+.option {
+  display: none;
+}
+
+.icon-checkbox {
+    position: relative;
+    width: 25px;
+    height: 25px;
+    display: flex;
+  --active-icon: '\f111';
+  --icon-weight: 400;
+}
+
+.icon-checkbox::before {
+  transition: 190ms all;
+  content: var(--active-icon);
+  font: var(--fa-font-solid);
+  font-size: 1em;
+  font-weight: var(--icon-weight);
+  position: absolute;
+  left: 0;
+}
+
+.option:checked + .icon-checkbox {
+  --active-icon: '\f058';
+  --icon-weight: 900;
+}
+
+.area-generate {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.password-area {
+    display: flex;
+    border: dashed #094AB4;
+    border-radius: 1em;
+    padding: 1em;
+    margin: 1em;
+}
+
+#passwordArea {
+    cursor: auto;
+    all: unset;
+    border: none;
+}
+
+
+#btn {
+    width: 155px;
+    height: 44px;
+    background-color: #094AB4;
+    color: #FFFFFF;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+}
+
+#btn:hover {
+    background-color: #0a47a8;
+}
+
+#btnClipboard {
+    border: none;
+    cursor: pointer;
+}
+
+.error {
+    display: none;
+    color: #e40000;
+}
+
+.warning {
+    color: #333333;
+}
